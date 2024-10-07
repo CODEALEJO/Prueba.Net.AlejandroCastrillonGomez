@@ -1,0 +1,6 @@
+@Prueba.Net.AlejandroCastrillonGomez__use_controllers_HostAddress = http://localhost:5142
+
+GET {{Prueba.Net.AlejandroCastrillonGomez__use_controllers_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
