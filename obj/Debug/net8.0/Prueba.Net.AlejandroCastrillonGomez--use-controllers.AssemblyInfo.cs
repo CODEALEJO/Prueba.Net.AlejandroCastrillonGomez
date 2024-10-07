@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Prueba.Net.AlejandroCastrillonGomez--use-controllers")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4db7aa905da3bf4aab8a5c45c717481fa77b20ef")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ab636046463d5fd6ef9145909b06df0c7165c72")]
 [assembly: System.Reflection.AssemblyProductAttribute("Prueba.Net.AlejandroCastrillonGomez--use-controllers")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Prueba.Net.AlejandroCastrillonGomez--use-controllers")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
