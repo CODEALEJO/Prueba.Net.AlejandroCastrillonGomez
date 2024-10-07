@@ -13,6 +13,7 @@ public class ApplicationDbcontext : DbContext
     public DbSet<Guest> Guests { get; set; }
     public DbSet<Room> Rooms { get; set; }
     public DbSet<Employee> Employees { get; set; }
+    public DbSet<RoomType> RoomTypes { get; set; }
 
 
     public ApplicationDbcontext(DbContextOptions<ApplicationDbcontext> options)
@@ -28,5 +29,9 @@ public class ApplicationDbcontext : DbContext
         RoomSeeder.Seed(modelBuilder);
         RoomTypeSeeder.Seed(modelBuilder);
         BookingSeeder.Seed(modelBuilder);
+        modelBuilder.Entity<RoomType>()
+        .HasMany(rt => rt.Rooms)
+        .WithOne(r => r.RoomType)
+        .HasForeignKey(r => r.RoomTypeId);
     }
 }

@@ -26,5 +26,5 @@ public class Room
     public bool Availability { get; set; }
     [Column("max_persons")]
     public int MaxPerson { get; set; }
-    //50 data of rooms
+    
 }

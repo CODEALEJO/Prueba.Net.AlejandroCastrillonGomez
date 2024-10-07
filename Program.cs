@@ -44,7 +44,7 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-
+builder.Services.AddScoped<IRoomInterface, RoomServices>(); 
 builder.Services.AddScoped<IBookingInterface, BookingServices>();
 
 builder.Services.AddControllers();
@@ -53,7 +53,7 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "C# API", Version = "v1" });
     
-    // Definición de seguridad para JWT
+    
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Description = "JWT Authorization header using the Bearer scheme. Example: \"Bearer {token}\"",
@@ -78,18 +78,13 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 
-    // Agrupar por controlador base
-    c.DocInclusionPredicate((docName, apiDesc) =>
-    {
-        // Agrupar todos los controladores que heredan de BookingController
-        return apiDesc.RelativePath.StartsWith("api/V1/bookings");
-    });
 
     c.EnableAnnotations();
 });
 
 
 var app = builder.Build();
+
 
 app.UseDeveloperExceptionPage();
 if (app.Environment.IsDevelopment())

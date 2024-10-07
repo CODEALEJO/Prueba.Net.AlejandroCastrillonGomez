@@ -17,6 +17,7 @@ public class RoomType
     public string Name { get; set; }
     [Column("description")]
     public string Description { get; set; }
-    //4 types of rooms
+    
+     public virtual ICollection<Room> Rooms { get; set; } = new List<Room>(); 
 
 }
